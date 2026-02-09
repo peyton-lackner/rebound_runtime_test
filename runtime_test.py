@@ -8,12 +8,11 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # %%
-def setup_system(Mstar, t):
+def setup_system(Mstar):
     """
-    Creates a peas in a pod system in REBOUND of stellar mass Mstar that runs for integration time t
+    Creates a peas in a pod system in REBOUND of stellar mass Mstar
     
     :param Mstar: Mass of the star in units of solar mass
-    :param t: time of integration in units of yrs
     """
     sim = rebound.Simulation()
     sim.units = ('yr', 'AU', 'Msun')
@@ -23,5 +22,5 @@ def setup_system(Mstar, t):
     sim.add(m=Mstar, hash='*')
 
     # Create DataFrame to organize planets in system
-    df=pd.DataFrame(columns=['mass', 'radius', 'semi-major_axis'])
+    df=pd.DataFrame(columns=['mass', 'radius', 'semi-major_axis', 'eccentricity', 'inclination'])
 
