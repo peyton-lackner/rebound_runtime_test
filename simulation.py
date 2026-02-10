@@ -2,11 +2,6 @@
 # Peas in a pod system simulation in REBOUND, testing the runtime of simulations
 
 # %%
-# Enable multi-threading
-import os
-os.environ["OMP_NUM_THREADS"] = '6'
-
-# %%
 import math
 import time
 import rebound
@@ -88,6 +83,8 @@ def integration_time_test(masses, test_particles, integration_time):
 
     # Run sim for all mass values in masses
     for m_star in masses:
+        print(f"Starting sim for {m_star} solar mass star...")
+
         # Create system with star mass m_star, 5 planets, and planets with 1.5 earth mass
         sim = setup_system(m_star, 5, 1.5*3e-6)
 
