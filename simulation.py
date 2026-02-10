@@ -109,7 +109,7 @@ def integration_time_test(masses, test_particles, integration_time):
     return results
 
 # %%
-test_masses = [0.2, 0.4, 0.6, 0.8, 1.0, 1.2] # Units of solar mass
+test_masses = [0.4, 0.6, 0.8, 1.0, 1.2] # Units of solar mass
 
 results = integration_time_test(test_masses, 1000, 1000)
 
