@@ -44,11 +44,11 @@ def setup_system(m_star, n_planets, planet_mass):
     """
     sim = rebound.Simulation()
 
-    #sim.integrator = 'mercurius'
-    #sim.ri_mercurius.r_crit_hill = 4.
+    sim.integrator = 'mercurius'
+    sim.ri_mercurius.r_crit_hill = 4.
 
-    sim.integrator = 'trace'
-    sim.ri_trace.r_crit_hill = 4
+    #sim.integrator = 'trace'
+    #sim.ri_trace.r_crit_hill = 4
     
 
     sim.units = ('yr', 'AU', 'Msun')
